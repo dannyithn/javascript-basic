@@ -5,11 +5,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuỗi</title>
+    <title>CHUỖI TRONG JAVASCRIPT</title>
 </head>
 
 <body>
+    <h2>CHUỖI TRONG JAVASCRIPT</h2>
+    <ul>
+        <li>1. TẠO CHUỖI</li>
+        <li> -Các cách tạo chuỗi</li>
+        <li> -Nên dùng cách nào ? Lý do ?</li>
+        <li> -Kiêm tra data type</li>
+        <li>2. Một số case sử dụng backslash (\)</li>
+        <li>3. Xem độ dài chuỗi</li>
+        <li>4. Chú ý độ dài khi viết</li>
+        <li>5. Template string ES6</li>
+    </ul>
 
+    <h3>LÀM VIỆC VỚI CHUỖI</h3>
+    <p>Keyword: JAVASCRIPT string method</p>
+    <ul>
+        <li>1. Length</li>
+        <li>2. Find index</li>
+        <li>3. Cut String</li>
+        <li>4.Replace</li>
+        <li>5. Convert to upper case</li>
+        <li>Conver to lower case</li>
+        <li>Trim</li>
+        <li>Split</li>
+        <li>Get a charater by index</li>
+    </ul>
+
+    <script>
+        var fullName = 'Dung Doan';
+        var firstName = 'Mr\' Dung';
+        /*Xem do dai chuoi*/
+        console.log(fullName.length);
+        console.log(`Toi la: ${firstName} (${fullName})`);
+
+        //Length
+        fullName.length;
+
+        //Find index -1 k tim thay, != -1 tim thay
+        console.log(fullName.indexOf('Dung'));
+        console.log(fullName.indexOf('Dung', 6));
+        console.log(fullName.lastIndexOf('Dung')); // vi tri cuoi
+        console.log(fullName.search('Dung')); //bieu thuc chinh tuy
+
+        //Cut String
+        console.log(fullName.slice(5, 7));
+
+        //Replace
+        fullName.replace('Dung', 'Javscript');
+        fullName.replace(/Dung/g, 'OK');
+
+        //Trim
+        fullName.trim();
+
+        //Split cắt chuỗi to array
+        var languages = 'Javascript, PHP, Ruby';
+        languages.split(', ');
+
+        // Get a character by index
+        languages.charAt(1);
+
+        var languages = [
+            'javascript',
+            'PHP',
+            'Ruby',
+        ]
+
+        var languages2 = [
+            'dart',
+            'java'
+        ]
+
+    // pop() : xóa element cuối mảng và trả về elemnet đã xóa 
+        // console.log(languages.pop())
+
+    // push() : thêm 1 hoặc nhìu phần tử cuối mảng và trả về độ dài mới của mảng
+        // console.log(languages.push('python', 'java'))
+        // console.log(languages)
+
+    // shift() : xóa element đầu mảng và trả về element đã xóa     
+        // console.log(languages.shift())
+        // console.log(languages)
+
+    // unshift() : thêm 1 hoặc nhìu phần tử vào đầu mảng và trả về độ dài mới của mảng
+        // console.log(languages.unshift('dart', 'java'))
+        // console.log(languages)
+
+    // splicing : xóa cắt hoặc chèn cả phần tử mới vào mảng
+        // languages.splice(1, 2, 'dart', 'java')  
+        // console.log(languages)
+
+    // concat(): nối array
+        // console.log(languages.concat(languages2))
+
+    // slicing : dùng để cắt một vài element của mảng
+        // console.log(languages.slice(-2, -1))
+
+    </script>
 </body>
 
 </html>
